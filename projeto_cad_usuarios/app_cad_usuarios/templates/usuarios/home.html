@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuários</title>
+    <!-- Adicione os estilos da sua navbar aqui -->
+    <style>
+        /* Estilos para a navbar (exemplo) */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">Sobre</a>
+        <a href="#contact">Contato</a>
+    </div>
+
+    <!-- Formulário de Cadastro de Usuários -->
+
+    <div>
+        <h1>Cadastro de Usuários</h1>
+        <form >
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Adicione os scripts aqui (se necessário) -->
+    <script>
+        // Exemplo de tratamento do formulário
+        const form = document.getElementById('cadastroForm');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Impede o envio tradicional do formulário
+            const nome = document.getElementById('nome').value;
+            const idade = document.getElementById('idade').value;
+            
+            // Aqui você pode fazer algo com os valores do nome e idade, como enviar para um servidor ou salvar em algum lugar.
+            // Por ser um exemplo, não implementaremos o envio dos dados.
+            
+            alert(`Cadastro enviado: Nome - ${nome}, Idade - ${idade}`);
+        });
+    </script>
+</body>
+
+</html>
